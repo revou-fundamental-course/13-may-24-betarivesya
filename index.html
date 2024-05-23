@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Kalkulator Segitiga</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div id="app">
+        <h1>Kalkulator Luas Segitiga</h1>
+        <div class="triangle-container">
+            <img src="https://asset-a.grid.id//crop/0x0:0x0/700x0/photo/2021/01/15/3991804788.jpg" alt="Gambar Segitiga">
+        </div>
+        <div id="area-formula">
+            <p>Rumus Luas Segitiga = 1/2 x a x t</p>
+        </div>
+        <div class="input-group">
+            <label for="base">Alas (cm):</label>
+            <input type="number" id="base" placeholder="Masukkan alas">
+        </div>
+        <div class="input-group">
+            <label for="height">Tinggi (cm):</label>
+            <input type="number" id="height" placeholder="Masukkan tinggi">
+        </div>
+        <button onclick="hitungLuas()">Hitung Luas</button>
+        <div id="result-area"></div>
+        <button id="toggle-perimeter">Tampilkan Kalkulator Keliling</button>
+        <div id="perimeter-section" style="display: none;">
+            <h1>Kalkulator Keliling Segitiga</h1>
+            <img id="perimeter-image" src="https://asset-a.grid.id//crop/0x0:0x0/700x0/photo/2021/01/15/1853786887.jpg" alt="Gambar Keliling">
+            <div id="perimeter-formula">
+                <p>Rumus Keliling Segitiga = s + s + s</p>
+            </div>
+            <div class="input-group">
+                <label for="side1">Sisi 1 (cm):</label>
+                <input type="number" id="side1" placeholder="Masukkan panjang sisi 1">
+            </div>
+            <div class="input-group">
+                <label for="side2">Sisi 2 (cm):</label>
+                <input type="number" id="side2" placeholder="Masukkan panjang sisi 2">
+            </div>
+            <div class="input-group">
+                <label for="side3">Sisi 3 (cm):</label>
+                <input type="number" id="side3" placeholder="Masukkan panjang sisi 3">
+            </div>
+            <button onclick="hitungKeliling()">Hitung Keliling</button>
+            <div id="result-perimeter"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
